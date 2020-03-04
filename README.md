@@ -39,11 +39,9 @@ function my_book_cpt() {
 `
 
 # Caso queira use apenas o código abaixo no seu post type
-`
-'rest_base'          	=> 'books',
-'rest_controller_class' => 'WP_REST_Posts_Controller',
-'supports'           	=> array( 'title', 'editor', 'thumbnail' )
-`
+`'rest_base'          	=> 'books',`
+`'rest_controller_class' => 'WP_REST_Posts_Controller',`
+`'supports'           	=> array( 'title', 'editor', 'thumbnail' )`
 
 # Para testar se está funcionando acesse a url do seu site
 - http://meusite.com.br/wp-json/wp/v2/{nome do post criado}
