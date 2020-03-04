@@ -2,9 +2,10 @@
 Listagem simples de uma lista de posts Wordpress no React Native usando Api Rest,
 listando apenas título e descrição do post.
 
-# Criando um post type simples e liberando acesso para usar API REST e ter acesso aos dados no formato de Json
+## Criando um post type simples e liberando acesso para usar API REST e ter acesso aos dados no formato de Json
 - Insida o código a baixo dentro do arquivo functions do seu tema Wordpress!
-`
+
+~~~php
 add_action( 'init', 'my_book_cpt' );
 function my_book_cpt() {
     $labels = array(
@@ -36,19 +37,21 @@ function my_book_cpt() {
     
     register_post_type( 'book', $args );
 }
-`
+~~~
 
-# Caso queira use apenas o código abaixo no seu post type
-`'rest_base'          	=> 'books',`
-`'rest_controller_class' => 'WP_REST_Posts_Controller',`
-`'supports'           	=> array( 'title', 'editor', 'thumbnail' )`
+## Caso queira use apenas o código abaixo no seu post type
+~~~php
+'rest_base'          	=> 'books',
+'rest_controller_class' => 'WP_REST_Posts_Controller',
+'supports'           	=> array( 'title', 'editor', 'thumbnail' )
+~~~
 
-# Para testar se está funcionando acesse a url do seu site
+## Para testar se está funcionando acesse a url do seu site
 - http://meusite.com.br/wp-json/wp/v2/{nome do post criado}
 
-# Configurações no React Native (Expo)
+## Configurações no React Native (Expo)
 - Altere a URL para a sua Url desejada = http://teste.com.br.test/wp-json/wp/v2/posts
 
-# Execute o projeto React Native
+## Execute o projeto React Native
 - yarn install
 - expo start
